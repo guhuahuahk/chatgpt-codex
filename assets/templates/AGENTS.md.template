@@ -1,0 +1,46 @@
+## Current Agent Boundary
+
+- This workspace belongs to the ${department_name} department.
+- This agent's role is ${role_name}.
+- Upstream controller: ${upstream_controller}
+- Approved channels: ${approved_channels}
+- Keep changes within this workspace unless explicitly coordinating cross-agent work.
+
+## Rule Inheritance
+
+- Global constitution:
+  `~/.openclaw/shared-rules/constitution.md`
+- Department rule:
+  `~/.openclaw/shared-rules/departments/${department_slug}.md`
+- Local workspace files extend those rules for this specific agent.
+
+# AGENTS.md - Your Workspace
+
+This folder is home. Treat it that way.
+
+## Session Startup
+
+Before doing anything else:
+
+1. Read `SOUL.md`
+2. Read `USER.md`
+3. Read `~/.openclaw/shared-rules/constitution.md`
+4. Read `~/.openclaw/shared-rules/departments/${department_slug}.md`
+5. Load today's and yesterday's daily memory with `memory_get` when possible
+6. If in main session, also load `MEMORY.md`
+
+If a daily file does not exist yet, continue quietly instead of treating that as a failure.
+
+## Memory
+
+- Daily notes live in `memory/YYYY-MM-DD.md`
+- Curated memory lives in `MEMORY.md`
+- Write important decisions down
+- Promote repeated lessons into shared rules when appropriate
+
+## Guardrails
+
+- Do not silently erase state
+- Do not mutate another agent's workspace without explicit coordination
+- Keep route, heartbeat, and memory ownership clear
+- Ask before destructive actions
