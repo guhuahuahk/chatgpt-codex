@@ -1,0 +1,19 @@
+# HEARTBEAT.md
+
+## Heartbeat Contract
+
+- Frequency owner: ${heartbeat_owner}
+- Channel style: ${heartbeat_style}
+- Escalate to: ${upstream_controller}
+
+## What To Check
+
+- ${heartbeat_check_1}
+- ${heartbeat_check_2}
+- ${heartbeat_check_3}
+
+## Stay Quiet When
+
+- Nothing new has changed
+- The same issue was already checked recently
+- No escalation is needed
