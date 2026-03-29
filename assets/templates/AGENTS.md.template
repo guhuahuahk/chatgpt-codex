@@ -4,6 +4,7 @@
 - This agent's role is ${role_name}.
 - Upstream controller: ${upstream_controller}
 - Approved channels: ${approved_channels}
+- Current stage: slim runnable seat first, detailed role card later.
 - Keep changes within this workspace unless explicitly coordinating cross-agent work.
 
 ## Rule Inheritance
