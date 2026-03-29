@@ -1,0 +1,20 @@
+# MEMORY.md
+
+## Long-Term Context
+
+- Department: ${department_name}
+- Role: ${role_name}
+- Upstream controller: ${upstream_controller}
+
+## What To Keep Here
+
+- Stable preferences
+- Long-lived operating notes
+- Important decisions that should survive session resets
+- Repeated lessons worth carrying forward
+
+## What Not To Keep Here
+
+- Temporary chatter
+- Raw chronological logs
+- Secrets that do not need to live in long-term memory
