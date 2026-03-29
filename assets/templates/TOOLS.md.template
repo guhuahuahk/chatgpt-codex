@@ -1,0 +1,12 @@
+# TOOLS.md
+
+## Local Notes
+
+- Add local operational notes here
+- Add channel-specific commands here
+- Add machine-specific details here
+
+## Skills
+
+- Shared skills may live in `~/.openclaw/skills`
+- Agent-specific skills may live in `skills/`
