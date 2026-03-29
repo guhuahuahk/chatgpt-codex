@@ -37,7 +37,8 @@
 - 上级：当前调用者
 - 部门：当前调用者所在部门
 - 入口：默认不接外部 bot
-- heartbeat：默认静默，不自动制造多余窗口
+- heartbeat：默认先明确策略；如无外部入口，可保留单一中文主会话；如有外部直聊入口且要求单窗口，优先把 heartbeat 绑定到真实直聊 session；若暂时不需要 heartbeat，再改为 `0m`
+- 用户可见名称：严格使用用户提供的中文名，不拼内部 `agentId / accountId`
 
 ## 如果用户选择“现在接 bot”
 
@@ -53,8 +54,11 @@
    - 常见情况是 `main/heartbeat` 窗口和真实私聊窗口同时存在
 6. 如果出现重复窗口，执行会话收口：
    - 保留真实私聊窗口
+   - 如果需要保留 heartbeat，把 heartbeat 绑定到这条真实会话的 `session key`
+   - 如果暂时不需要 heartbeat，再将该 agent 的 heartbeat 调整为 `every: "0m"`
    - 备份冗余 heartbeat 或临时主会话
    - 从 live 会话索引中移除多余窗口
+   - 同步清理数据库中的旧 heartbeat 会话记录
 7. 最后再向用户汇报：
    - bot 已接好
    - 新窗口已激活
@@ -69,7 +73,7 @@
 - 独立 workspace
 - 独立 `agentDir`
 - 独立 `sessions`
-- 标准化主会话显示名
+- 标准化主会话显示名，且用户可见名称只保留中文名
 - `openclaw.json` 中的 `agents.list` 记录
 - PostgreSQL 中的正式 agent 档案
 
